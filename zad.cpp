@@ -1,21 +1,20 @@
-#include <stdlib.h>
-#include <math.h>
-
-void main() {
-	int n,q,k,m,i,s,f,r,a, *A;
+#define W while
+main() {
+	int n,q,k,m,s,f,a, A[10];
 	scanf("%d %d %d %d",&n,&q,&k,&m);
-	A = malloc (4*(n+1));
-	for(i=n;i>=0;)
-	    scanf("%d", &A[i--]);
-	for(i=q-1;m-i++;){
-	    r=f=s=0;
-	    for(;f<=n;)
-	        s += pow(i, f) * A[f++];
-	    while (s) {
+	s=n+1;
+	W(s)
+	    scanf("%d", A+--s);
+	W(k-q++){
+	    f=n+1;
+	    W(f)
+	        s += pow(q-1, --f) * A[f];
+	    s%=(int)pow(10,m);
+	    W(s) {
 	        a = s %10;
-	        r += a*a;
+	        f += a*a;
 	        s /= 10;
 	    }
-	    printf("%d\n",r);
+	    printf("%d\n",f);
 	}
 }
